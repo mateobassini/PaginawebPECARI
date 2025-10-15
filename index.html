@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PECARÍ Implementos | La fuerza inteligente</title>
+  <meta name="description" content="Implementos para minicargadoras y maquinaria vial. Fabricación propia, red de concesionarios y entrega inmediata." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Ir al inicio PECARÍ">
+        <img src="assets/logo-pecari.jpg" alt="PECARÍ Implementos" height="40" />
+      </a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal" role="navigation">
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <button class="btn btn-outline sm-hidden" type="button" data-scroll-to="#contacto" aria-controls="contacto">Contacto</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false" type="button">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Implementos que multiplican la <span class="accent">productividad</span></h1>
+          <p>Diseño y fabricación propia para minicargadoras y maquinaria vial. Más de 300 equipos disponibles a través de nuestra red.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="/productos.html">Ver productos</a>
+            <button class="btn btn-ghost" type="button" data-scroll-to="#contacto" aria-controls="contacto">Hacer una consulta</button>
+          </div>
+        </div>
+        <picture class="hero-media">
+          <img src="assets/hero-implemento.webp" alt="Implementos PECARÍ trabajando en obra" loading="eager" />
+        </picture>
+      </div>
+      <div class="hero-badges container" aria-label="Diferenciales de PECARÍ">
+        <div class="badge">Red de concesionarios</div>
+        <div class="badge">Entrega inmediata</div>
+        <div class="badge">Diseño y fabricación propia</div>
+      </div>
+    </section>
+
+    <!-- TEASER PRODUCTOS -->
+    <section class="teaser-products" aria-labelledby="teaser-title">
+      <div class="container section-head">
+        <h2 id="teaser-title">Soluciones destacadas</h2>
+        <a class="link-arrow" href="/productos.html">Ver todo</a>
+      </div>
+      <div class="container grid-3">
+        <article class="card">
+          <img src="assets/prod-excavador.webp" alt="Excavador" />
+          <div class="card-body">
+            <h3>Excavadores</h3>
+            <p>Respuestas a múltiples necesidades de excavación en obra.</p>
+            <a class="link-arrow" href="/productos.html#excavadores" aria-label="Explorar categoría Excavadores">Explorar</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/prod-hoyadora.webp" alt="Hoyadora" />
+          <div class="card-body">
+            <h3>Hoyadoras</h3>
+            <p>Perforaciones rápidas y precisas incluso en suelos complejos.</p>
+            <a class="link-arrow" href="/productos.html#hoyadoras" aria-label="Explorar categoría Hoyadoras">Explorar</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/prod-zanjadora.webp" alt="Zanjadora" />
+          <div class="card-body">
+            <h3>Zanjadoras</h3>
+            <p>Instalación de líneas de agua, gas, desagüe y electricidad.</p>
+            <a class="link-arrow" href="/productos.html#zanjadoras" aria-label="Explorar categoría Zanjadoras">Explorar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INSTITUCIONAL -->
+    <section class="institucional" aria-labelledby="inst-title">
+      <div class="container split">
+        <div>
+          <h2 id="inst-title">Empresa argentina, <span class="accent">calidad certificada</span></h2>
+          <p>Somos líderes en innovación, diseño y fabricación de implementos para la construcción. Procesos con enfoque de calidad y un equipo especializado.</p>
+          <div class="bullets" role="list">
+            <div role="listitem">+4000 implementos vendidos</div>
+            <div role="listitem">+10 años de trayectoria</div>
+            <div role="listitem">ISO 9001</div>
+          </div>
+          <a class="btn btn-outline" href="/empresa.html">Conocé más</a>
+        </div>
+        <img class="rounded" src="assets/fabrica.webp" alt="Fábrica y equipo de PECARÍ" />
+      </div>
+    </section>
+
+    <!-- CONTACTO (form en Home) -->
+    <section class="contacto" id="contacto" aria-labelledby="contacto-title">
+      <div class="container section-head">
+        <h2 id="contacto-title">¿Hacemos una consulta?</h2>
+        <p>Dejanos tus datos y un asesor de tu zona te contactará.</p>
+      </div>
+
+      <form class="container form" id="contactForm" novalidate>
+        <div class="grid-2">
+          <div class="form-field">
+            <label for="nombre">Nombre y apellido *</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-field">
+            <label for="empresa">Empresa *</label>
+            <input id="empresa" type="text" name="empresa" placeholder="Tu empresa" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required />
+          </div>
+          <div class="form-field">
+            <label for="telefono">Teléfono *</label>
+            <input id="telefono" type="tel" name="telefono" placeholder="Ej: 11 5555-5555" required />
+          </div>
+          <div class="form-field">
+            <label for="provincia">Provincia *</label>
+            <select id="provincia" name="provincia" required aria-describedby="prov-hint">
+              <option value="">Seleccionar…</option>
+              <option>Buenos Aires</option><option>Catamarca</option><option>Chaco</option><option>Chubut</option>
+              <option>Córdoba</option><option>Corrientes</option><option>Entre Ríos</option><option>Formosa</option>
+              <option>Jujuy</option><option>La Pampa</option><option>La Rioja</option><option>Mendoza</option>
+              <option>Misiones</option><option>Neuquén</option><option>Río Negro</option><option>Salta</option>
+              <option>San Juan</option><option>San Luis</option><option>Santa Cruz</option><option>Santa Fe</option>
+              <option>Santiago del Estero</option><option>Tierra del Fuego</option><option>Tucumán</option>
+            </select>
+            <small id="prov-hint" class="sr-only">Seleccioná tu provincia para derivar a un asesor local.</small>
+          </div>
+          <div class="form-field">
+            <label for="implemento">Implemento de interés *</label>
+            <select id="implemento" name="implemento" required>
+              <option value="">Seleccionar…</option>
+              <option>Excavadores</option><option>Hoyadoras</option><option>Vibrocompactadores</option>
+              <option>Portapallets</option><option>Zanjadora</option><option>Barredoras</option>
+              <option>Hormigoneros</option><option>Nivelador</option><option>Removedores</option>
+              <option>Garras</option><option>Palas</option><option>Otros</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué necesitás" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Enviar consulta</button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-pecari.jpg" alt="PECARÍ" height="28" />
+        <p>Mitre 114 – Concepción del Uruguay · Entre Ríos, Argentina</p>
+        <p>Lun a Vie · 8:00 – 17:00</p>
+      </div>
+      <nav aria-label="Secciones del sitio">
+        <h4>Secciones</h4>
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <a href="#contacto" data-scroll-to="#contacto">Contacto</a>
+      </nav>
+      <div>
+        <h4>Atención</h4>
+        <a href="tel:+5493442507056">+54 9 3442 507056</a><br>
+        <a href="tel:+5493442422492">+54 9 3442 422492</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> PECARÍ. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

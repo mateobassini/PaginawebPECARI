@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empresa | PECARÍ Implementos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Ir al inicio PECARÍ"><img src="assets/logo-pecari.jpg" alt="PECARÍ" height="40" /></a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal" role="navigation">
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a class="active" href="/empresa.html">Empresa</a>
+        <button class="btn btn-outline sm-hidden" type="button" data-go-home data-scroll-to="#contacto-home" aria-controls="contacto-home">Contacto</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false" type="button">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-head">
+      <div class="container">
+        <h1>La empresa</h1>
+        <p>Innovación, diseño y fabricación de implementos para la construcción. Enfocados en calidad, seguridad y disponibilidad.</p>
+      </div>
+    </section>
+
+    <section class="container split">
+      <div>
+        <h2>Propósito</h2>
+        <p>Facilitar el trabajo en obra con implementos robustos y eficientes que multiplican la productividad de nuestros clientes.</p>
+        <h3>Qué nos distingue</h3>
+        <ul class="checks">
+          <li>Diseño y fabricación propia</li>
+          <li>Red de concesionarios a nivel nacional</li>
+          <li>Entrega inmediata de stock</li>
+          <li>Soldadores certificados · procesos ISO 9001</li>
+        </ul>
+      </div>
+      <img class="rounded" src="assets/equipo.webp" alt="Equipo de trabajo PECARÍ" />
+    </section>
+
+    <section class="container kpis" aria-label="Indicadores clave">
+      <div class="kpi"><span>+4000</span> implementos vendidos</div>
+      <div class="kpi"><span>300+</span> productos disponibles</div>
+      <div class="kpi"><span>10+</span> años de trayectoria</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-pecari.jpg" alt="PECARÍ" height="28" />
+        <p>Mitre 114 – Concepción del Uruguay · Entre Ríos, Argentina</p>
+        <p>Lun a Vie · 8:00 – 17:00</p>
+      </div>
+      <nav aria-label="Secciones del sitio">
+        <h4>Secciones</h4>
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <a href="#contacto" data-scroll-to="#contacto">Contacto</a>
+      </nav>
+      <div>
+        <h4>Atención</h4>
+        <a href="tel:+5493442507056">+54 9 3442 507056</a><br>
+        <a href="tel:+5493442422492">+54 9 3442 422492</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> PECARÍ. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos | PECARÍ Implementos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Ir al inicio PECARÍ"><img src="assets/logo-pecari.jpg" alt="PECARÍ" height="40" /></a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal" role="navigation">
+        <a class="active" href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <button class="btn btn-outline sm-hidden" type="button" data-scroll-to="#contacto-home" data-go-home aria-controls="contacto-home">Contacto</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false" type="button">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-head">
+      <div class="container">
+        <h1>Productos</h1>
+        <p>Gama amplia para distintas tareas de obra. Seleccioná una categoría.</p>
+      </div>
+    </section>
+
+    <section class="container filters" aria-labelledby="buscar-label">
+      <label id="buscar-label" class="sr-only" for="search">Buscar productos</label>
+      <input id="search" type="search" placeholder="Buscar producto…" aria-describedby="buscar-label" />
+      <div class="chips" id="chips" role="tablist" aria-label="Categorías de productos"></div>
+    </section>
+
+    <section class="container grid-3" id="catalogo" aria-live="polite" aria-label="Resultados de productos">
+      <!-- Items generados por JS (ver app.js) -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-pecari.jpg" alt="PECARÍ" height="28" />
+        <p>Mitre 114 – Concepción del Uruguay · Entre Ríos, Argentina</p>
+        <p>Lun a Vie · 8:00 – 17:00</p>
+      </div>
+      <nav aria-label="Secciones del sitio">
+        <h4>Secciones</h4>
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <a href="#contacto" data-scroll-to="#contacto">Contacto</a>
+      </nav>
+      <div>
+        <h4>Atención</h4>
+        <a href="tel:+5493442507056">+54 9 3442 507056</a><br>
+        <a href="tel:+5493442422492">+54 9 3442 422492</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> PECARÍ. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

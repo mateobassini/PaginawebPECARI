@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concesionarios | PECARÍ Implementos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Ir al inicio PECARÍ"><img src="assets/logo-pecari.jpg" alt="PECARÍ" height="40" /></a>
+      <nav class="nav" id="mainNav" aria-label="Navegación principal" role="navigation">
+        <a href="/productos.html">Productos</a>
+        <a class="active" href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <button class="btn btn-outline sm-hidden" type="button" data-go-home data-scroll-to="#contacto-home" aria-controls="contacto-home">Contacto</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false" type="button">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-head">
+      <div class="container">
+        <h1>Red de concesionarios</h1>
+        <p>Asesoramiento en todo el país a través de nuestra red de socios comerciales.</p>
+      </div>
+    </section>
+
+    <section class="container split">
+      <div>
+        <h2>Encontrá tu asesor</h2>
+        <p>Elegí tu provincia para ver el contacto correspondiente.</p>
+
+        <label for="provinciaSelect" class="sr-only">Seleccionar provincia</label>
+        <select id="provinciaSelect" class="w100" aria-describedby="prov-hint">
+          <option value="">Seleccionar provincia…</option>
+          <option>Buenos Aires</option><option>Catamarca</option><option>Chaco</option><option>Chubut</option>
+          <option>Córdoba</option><option>Corrientes</option><option>Entre Ríos</option><option>Formosa</option>
+          <option>Jujuy</option><option>La Pampa</option><option>La Rioja</option><option>Mendoza</option>
+          <option>Misiones</option><option>Neuquén</option><option>Río Negro</option><option>Salta</option>
+          <option>San Juan</option><option>San Luis</option><option>Santa Cruz</option><option>Santa Fe</option>
+          <option>Santiago del Estero</option><option>Tierra del Fuego</option><option>Tucumán</option>
+        </select>
+        <small id="prov-hint" class="sr-only">Al elegir una provincia se mostrará el contacto.</small>
+
+        <div id="dealerResult" class="dealer-card" aria-live="polite"></div>
+      </div>
+
+      <div class="map-embed">
+        <iframe title="Ubicación sede PECARÍ" src="https://www.google.com/maps?q=Mitre%20114%2C%20Concepción%20del%20Uruguay&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-pecari.jpg" alt="PECARÍ" height="28" />
+        <p>Mitre 114 – Concepción del Uruguay · Entre Ríos, Argentina</p>
+        <p>Lun a Vie · 8:00 – 17:00</p>
+      </div>
+      <nav aria-label="Secciones del sitio">
+        <h4>Secciones</h4>
+        <a href="/productos.html">Productos</a>
+        <a href="/concesionarios.html">Concesionarios</a>
+        <a href="/empresa.html">Empresa</a>
+        <a href="#contacto" data-scroll-to="#contacto">Contacto</a>
+      </nav>
+      <div>
+        <h4>Atención</h4>
+        <a href="tel:+5493442507056">+54 9 3442 507056</a><br>
+        <a href="tel:+5493442422492">+54 9 3442 422492</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> PECARÍ. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
