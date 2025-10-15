@@ -265,7 +265,7 @@ img {
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  outline: 2px solid color-mix(in oklab, var(--brand-primary) 40%, white);
+  outline: 1px solid color-mix(in oklab, var(--brand-primary) 40%, white);
 }
 .form-actions {
   display: flex;
