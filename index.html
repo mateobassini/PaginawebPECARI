@@ -50,6 +50,46 @@
       </div>
     </section>
 
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <style>
+      #map { width: 100%; height: 360px; border-radius: 12px; }
+      .dealer-card {
+        border:1px solid #ddd; border-radius:12px; padding:1rem;
+        max-width:420px; background:#fafafa; box-shadow:0 2px 5px rgba(0,0,0,.08);
+      }
+      .dealer-card img { width:100%; border-radius:8px; margin-bottom:10px; }
+      .muted { color:#6b7280; }
+    </style>
+
+    <div class="concesionarios-modulo" style="display:grid; gap:1rem; grid-template-columns: 1fr; max-width:1000px; margin-inline:auto;">
+      <label>
+        Provincia:
+        <select id="provinciaSelect">
+          <option value="" selected>Elegí tu provincia…</option>
+          <option>Entre Ríos</option>
+          <option>Buenos Aires</option>
+          <!-- Agregar el resto -->
+        </select>
+      </label>
+
+      <div id="dealerResult" class="muted">Seleccioná una provincia para ver el contacto.</div>
+      <div id="map"></div>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="assets/js/concesionarios.js"></script>
+
+
     <!-- TEASER PRODUCTOS -->
     <section class="teaser-products" aria-labelledby="teaser-title">
       <div class="container section-head">

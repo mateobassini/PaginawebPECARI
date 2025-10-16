@@ -1,0 +1,18 @@
+{
+  "Entre Ríos": {
+    "nombre": "FABRICA PECARI IMPLEMENTOS",
+    "localidad": "Concepción del Uruguay",
+    "tel": "+54 9 3442 507056",
+    "email": "info@pecari.com.ar",
+    "img": "assets/img/dealers/entrerios.jpg",
+    "coords": [-32.4846, -58.2320]
+  },
+  "Buenos Aires": {
+    "nombre": "Equipco S.A.",
+    "localidad": "Pilar",
+    "tel": "+54 9 11 5555 5555",
+    "email": "ba@pecari.com.ar",
+    "img": "assets/img/dealers/amg.png",
+    "coords": [-34.9214, -57.9544]
+  }
+}
