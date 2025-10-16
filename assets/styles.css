@@ -375,8 +375,8 @@ img {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 2px;
   padding: 24px 0;
 }
 .site-footer a {

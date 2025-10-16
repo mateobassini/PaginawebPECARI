@@ -60,9 +60,14 @@
     {id:1, nombre:'Excavador Dynamic RS450', cat:'excavadores', img:'assets/prod-excavador.webp'},
     {id:2, nombre:'Hoyadora Power HP450', cat:'hoyadoras', img:'assets/prod-hoyadora.webp'},
     {id:3, nombre:'Vibrocompactador Dual VD 120/150', cat:'vibrocompactadores', img:'assets/prod-vibro.webp'},
-    {id:4, nombre:'Zanjadora ZA400', cat:'zanjadoras', img:'assets/prod-zanjadora.webp'},
+    {id:4, nombre:'Zanjadora ZA400', cat:'zanjadoras', img:'assets/zanjadora.jpg'},
     {id:5, nombre:'Portapallet Extreme', cat:'portapallets', img:'assets/prod-portapallets.webp'},
-    {id:6, nombre:'Pala Hormigonera', cat:'hormigoneros', img:'assets/prod-hormigonera.webp'}
+    {id:6, nombre:'Excavador estandar RT450', cat:'excavadores', img:'assets/prod-hormigonera.webp'},
+    {id:7, nombre:'Trompo hormigonero HM500', cat:'hormigoneros', img:'assets/prod-hormigonera.webp'},
+    {id:8, nombre:'Vibrocompactador liso VC 120/150', cat:'vibrocompactadores', img:'assets/prod-hormigonera.webp'},
+    {id:9, nombre:'Pala barredora PB140C', cat:'barredoras', img:'assets/prod-hormigonera.webp'},
+    {id:10, nombre:'Pala Hormigonera', cat:'hormigoneros', img:'assets/prod-hormigonera.webp'},
+    {id:11, nombre:'Desmalezadora', cat:'desmalezadora', img:'assets/desmalezadora.jpg'},
   ];
   const cats=[...new Set(data.map(d=>d.cat))];
 
@@ -112,18 +117,60 @@
 
 // Concesionarios – ejemplo mínimo (mock)
 (function(){
-  const select=document.getElementById('provinciaSelect');
-  const out=document.getElementById('dealerResult');
-  if(!select||!out) return;
-  const dealers={
-    'Entre Ríos': { nombre:'Centro de Atención', tel:'+54 9 3442 507056', email:'contacto@pecari.com.ar' },
-    'Buenos Aires': { nombre:'Asesor Buenos Aires', tel:'+54 9 11 5555 5555', email:'ba@pecari.com.ar' }
-    // Agregar el resto desde su base real
+  const select = document.getElementById('provinciaSelect');
+  const out = document.getElementById('dealerResult');
+  if (!select || !out) return;
+
+  const dealers = {
+    'Entre Ríos': { 
+      nombre: 'Centro de Atención', 
+      localidad: 'Concepción del Uruguay',
+      tel: '+54 9 3442 507056', 
+      email: 'contacto@pecari.com.ar',
+      img: 'https://www.pecari.com.ar/images/dealers/entrerios.jpg'
+    },
+    'Buenos Aires': { 
+      nombre: 'Asesor Buenos Aires', 
+      localidad: 'La Plata',
+      tel: '+54 9 11 5555 5555', 
+      email: 'ba@pecari.com.ar',
+      img: 'https://www.pecari.com.ar/images/dealers/buenosaires.jpg'
+    }
+    // 🔸 Agregar el resto de provincias aquí con sus datos
   };
-  select.addEventListener('change',()=>{
-    const d=dealers[select.value];
-    out.innerHTML = d ? `<strong>${d.nombre}</strong><br><a href="tel:${d.tel}">${d.tel}</a><br><a href="mailto:${d.email}">${d.email}</a>` : '<span class="muted">Pronto publicaremos el contacto de tu zona.</span>';
+
+  // 🔹 Restaurar provincia guardada
+  const savedProvince = localStorage.getItem('provinciaSeleccionada');
+  if (savedProvince && dealers[savedProvince]) {
+    select.value = savedProvince;
+    renderDealer(savedProvince);
+  }
+
+  // 🔹 Escuchar cambios de selección
+  select.addEventListener('change', () => {
+    const provincia = select.value;
+    if (dealers[provincia]) {
+      localStorage.setItem('provinciaSeleccionada', provincia);
+      renderDealer(provincia);
+    } else {
+      localStorage.removeItem('provinciaSeleccionada');
+      out.innerHTML = '<span class="muted">Pronto publicaremos el contacto de tu zona.</span>';
+    }
   });
+
+  // 🔹 Función para renderizar la tarjeta del dealer
+  function renderDealer(provincia) {
+    const d = dealers[provincia];
+    out.innerHTML = `
+      <div class="dealer-card" style="border:1px solid #ddd; border-radius:12px; padding:1rem; max-width:320px; background:#fafafa; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        <img src="${d.img}" alt="${d.nombre}" style="width:100%; border-radius:8px; margin-bottom:10px;">
+        <strong style="display:block; font-size:1.1rem;">${d.nombre}</strong>
+        <span style="color:#555; display:block; margin-bottom:6px;">${d.localidad}</span>
+        <a href="tel:${d.tel}" style="display:block; color:#007bff;">${d.tel}</a>
+        <a href="mailto:${d.email}" style="display:block; color:#007bff;">${d.email}</a>
+      </div>
+    `;
+  }
 })();
 
 // Validación básica de contacto (sin backend). Reemplazar por POST real (Formspree/Email/API)
