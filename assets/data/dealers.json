@@ -7,12 +7,30 @@
     "img": "assets/img/dealers/entrerios.jpg",
     "coords": [-32.4846, -58.2320]
   },
-  "Buenos Aires": {
-    "nombre": "AMG VIAL SA",
-    "localidad": "General Rodríguez",
-    "tel": "+54 9 11 5555 5555",
-    "email": "ba@pecari.com.ar",
-    "img": "assets/img/dealers/amg.png",
-    "coords": [-34.6016, -58.91048]
-  }
+  "Buenos Aires": [
+    {
+      "nombre": "AMG VIAL SA",
+      "localidad": "General Rodríguez",
+      "tel": "+54 9 11 5555 5555",
+      "email": "ba@pecari.com.ar",
+      "img": "assets/dealers/amg.png",
+      "coords": [-34.6016, -58.91048]
+    },
+    {
+      "nombre": "Equipco sa",
+      "localidad": "Pilar",
+      "tel": "+54 9 11 5555 5555",
+      "email": "ba@pecari.com.ar",
+      "img": "assets/dealers/amg.png",
+      "coords": [-35.6016, -58.91048]
+    },
+    {
+      "nombre": "aijden",
+      "localidad": "General Rodríguez",
+      "tel": "+54 9 11 5555 5555",
+      "email": "ba@pecari.com.ar",
+      "img": "assets/dealers/amg.png",
+      "coords": [-36.6016, -58.91048]
+    }
+  ]
 }

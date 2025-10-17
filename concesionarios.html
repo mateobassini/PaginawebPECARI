@@ -6,6 +6,25 @@
   <title>Concesionarios | PECARÍ Implementos</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Leaflet CSS (mapa) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <style>
+    /* Ajustes mínimos para el módulo de concesionarios */
+    .dealer-card{border:1px solid #ddd;border-radius:12px;padding:1rem;max-width:420px;background:#fafafa;box-shadow:0 2px 5px rgba(0,0,0,.08)}
+    .dealer-card img{width:100%;border-radius:8px;margin-bottom:10px}
+    .muted{color:#6b7280}
+    #map{width:100%;height:360px;border-radius:12px}
+    .split{display:grid;grid-template-columns:1fr;gap:1.5rem}
+    @media (min-width: 900px){ .split{grid-template-columns:1fr 1fr} }
+    .w100{width:100%}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -35,22 +54,20 @@
         <p>Elegí tu provincia para ver el contacto correspondiente.</p>
 
         <label for="provinciaSelect" class="sr-only">Seleccionar provincia</label>
+        <!-- Dejamos solo la opción placeholder: se completa dinámicamente con dealers.json -->
         <select id="provinciaSelect" class="w100" aria-describedby="prov-hint">
           <option value="">Seleccionar provincia…</option>
-          <option>Buenos Aires</option><option>Catamarca</option><option>Chaco</option><option>Chubut</option>
-          <option>Córdoba</option><option>Corrientes</option><option>Entre Ríos</option><option>Formosa</option>
-          <option>Jujuy</option><option>La Pampa</option><option>La Rioja</option><option>Mendoza</option>
-          <option>Misiones</option><option>Neuquén</option><option>Río Negro</option><option>Salta</option>
-          <option>San Juan</option><option>San Luis</option><option>Santa Cruz</option><option>Santa Fe</option>
-          <option>Santiago del Estero</option><option>Tierra del Fuego</option><option>Tucumán</option>
         </select>
         <small id="prov-hint" class="sr-only">Al elegir una provincia se mostrará el contacto.</small>
 
-        <div id="dealerResult" class="dealer-card" aria-live="polite"></div>
+        <div id="dealerResult" class="dealer-card" aria-live="polite">
+          <span class="muted">Seleccioná una provincia para ver el contacto.</span>
+        </div>
       </div>
 
       <div class="map-embed">
-        <iframe title="Ubicación sede PECARÍ" src="https://www.google.com/maps?q=Mitre%20114%2C%20Concepción%20del%20Uruguay&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Reemplazamos el iframe por el contenedor del mapa Leaflet -->
+        <div id="map" role="region" aria-label="Mapa de concesionarios"></div>
       </div>
     </section>
   </main>
@@ -80,6 +97,14 @@
     </div>
   </footer>
 
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin></script>
+
+  <!-- Tu app base -->
   <script src="assets/app.js" defer></script>
+
+  <!-- Módulo concesionarios: usa fetch a assets/data/dealers.json -->
+  <script src="assets/js/concesionarios.js" defer></script>
 </body>
 </html>
+
